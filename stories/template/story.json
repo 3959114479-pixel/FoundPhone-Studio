@@ -230,11 +230,12 @@
       "name": "接听并挂断电话",
       "steps": [
         {
-          "event": "start"
-        },
-        {
           "event": "read",
           "target": "kakao-009"
+        },
+        {
+          "event": "callAnswered",
+          "target": "call-jungkook"
         },
         {
           "event": "callEnded",
@@ -252,9 +253,6 @@
     {
       "name": "拒绝来电",
       "steps": [
-        {
-          "event": "start"
-        },
         {
           "event": "read",
           "target": "kakao-009"
