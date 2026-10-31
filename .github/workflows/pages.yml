@@ -1,3 +1,4 @@
+# Trigger a fresh Pages build and deployment.
 name: Validate and deploy Pages
 on:
   push:
