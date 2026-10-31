@@ -62,6 +62,10 @@
         },
         "notifications": {
           "type": "boolean"
+        },
+        "wallpaperImage": {
+          "type": "string",
+          "maxLength": 400000
         }
       },
       "required": [
