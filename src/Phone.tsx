@@ -624,7 +624,7 @@ function PhoneRuntime({
                   const record = work.data.phone?.find(
                     (i) => i.id === s.incomingCall?.target,
                   );
-                  const lines = (record?.body ?? "").split("\\n").filter(Boolean);
+                  const lines = (record?.body ?? "").split("\n").filter(Boolean);
                   return record?.kind === "audio" && safeMedia(record.media) ? (
                     <audio controls src={safeMedia(record.media)} />
                   ) : (
@@ -646,7 +646,7 @@ function PhoneRuntime({
                       return;
                     }
                     const record = work.data.phone?.find((i) => i.id === call.target);
-                    const lines = (record?.body ?? "").split("\\n").filter(Boolean);
+                    const lines = (record?.body ?? "").split("\n").filter(Boolean);
                     if (callLineIndex < lines.length - 1) {
                       setCallLineIndex((index) => index + 1);
                       return;
@@ -659,7 +659,7 @@ function PhoneRuntime({
                   <span>
                     {s.incomingCall.status === "ringing"
                       ? "拒接"
-                      : callLineIndex < (work.data.phone?.find((i) => i.id === s.incomingCall?.target)?.body ?? "").split("\\n").filter(Boolean).length - 1
+                      : callLineIndex < (work.data.phone?.find((i) => i.id === s.incomingCall?.target)?.body ?? "").split("\n").filter(Boolean).length - 1
                         ? "继续"
                         : "挂断"}
                   </span>
