@@ -133,6 +133,7 @@ function PhoneRuntime({
   onRuntime?: (s: Runtime) => void;
 }) {
   const [app, setApp] = useState("");
+  const [callLineIndex, setCallLineIndex] = useState(0);
   const [homeRequest, setHomeRequest] = useState(0);
   const [locked, setLocked] = useState(!creator);
   const [pinOpen, setPinOpen] = useState(false);
@@ -623,10 +624,15 @@ function PhoneRuntime({
                   const record = work.data.phone?.find(
                     (i) => i.id === s.incomingCall?.target,
                   );
+                  const lines = (record?.body ?? "").split("\\n").filter(Boolean);
                   return record?.kind === "audio" && safeMedia(record.media) ? (
                     <audio controls src={safeMedia(record.media)} />
                   ) : (
-                    <p>这是一通虚构来电。</p>
+                    <div className="call-transcript" aria-live="polite">
+                      <small>通话内容 · 点击继续</small>
+                      <p>{lines[callLineIndex] ?? "通话结束"}</p>
+                      <span>{Math.min(callLineIndex + 1, lines.length)} / {lines.length}</span>
+                    </div>
                   );
                 })()}
               <div className="incoming-actions">
@@ -634,22 +640,28 @@ function PhoneRuntime({
                   className="decline-call"
                   onClick={() => {
                     const call = runtimeRef.current.incomingCall;
-                    if (call)
-                      update(
-                        dispatch(
-                          work,
-                          { ...runtimeRef.current, incomingCall: null },
-                          call.status === "ringing"
-                            ? "callDeclined"
-                            : "callEnded",
-                          call.target || call.caller,
-                        ),
-                      );
+                    if (!call) return;
+                    if (call.status === "ringing") {
+                      update(dispatch(work, { ...runtimeRef.current, incomingCall: null }, "callDeclined", call.target || call.caller));
+                      return;
+                    }
+                    const record = work.data.phone?.find((i) => i.id === call.target);
+                    const lines = (record?.body ?? "").split("\\n").filter(Boolean);
+                    if (callLineIndex < lines.length - 1) {
+                      setCallLineIndex((index) => index + 1);
+                      return;
+                    }
+                    update(dispatch(work, { ...runtimeRef.current, incomingCall: null }, "callEnded", call.target || call.caller));
+                    setCallLineIndex(0);
                   }}
                 >
                   <PhoneIcon size={25} />
                   <span>
-                    {s.incomingCall.status === "ringing" ? "拒接" : "挂断"}
+                    {s.incomingCall.status === "ringing"
+                      ? "拒接"
+                      : callLineIndex < (work.data.phone?.find((i) => i.id === s.incomingCall?.target)?.body ?? "").split("\\n").filter(Boolean).length - 1
+                        ? "继续"
+                        : "挂断"}
                   </span>
                 </button>
                 {s.incomingCall.status === "ringing" && (
@@ -657,18 +669,10 @@ function PhoneRuntime({
                     className="accept-call"
                     onClick={() => {
                       const call = runtimeRef.current.incomingCall;
-                      if (call)
-                        update(
-                          dispatch(
-                            work,
-                            {
-                              ...runtimeRef.current,
-                              incomingCall: { ...call, status: "answered" },
-                            },
-                            "callAnswered",
-                            call.target || call.caller,
-                          ),
-                        );
+                      if (call) {
+                        setCallLineIndex(0);
+                        update(dispatch(work, { ...runtimeRef.current, incomingCall: { ...call, status: "answered" } }, "callAnswered", call.target || call.caller));
+                      }
                     }}
                   >
                     <PhoneIcon size={25} />
