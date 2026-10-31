@@ -3,7 +3,7 @@
   "id": "late-night-kakao",
   "title": "凌晨两点的来电",
   "description": "一段发生在KakaoTalk里的冷战对话。聊天结束后，田柾国来电；玩家可以选择接听或拒绝。",
-  "revision": 1,
+  "revision": 2,
   "phone": {
     "owner": "我",
     "date": "2026-11-01",
@@ -140,23 +140,37 @@
   "events": [
     {
       "id": "story-start",
-      "label": "聊天结束｜田柾国来电",
+      "label": "聊天结束，田柾国来电",
       "type": "start",
       "actions": [
         {
           "type": "call",
-          "key": "call-accepted",
+          "key": "call-jungkook",
           "value": "田柾国"
         }
       ],
-      "next": [],
+      "next": [
+        "call-choice"
+      ],
       "once": true
     },
     {
-      "id": "call-accepted",
+      "id": "call-choice",
+      "label": "选择是否接听",
+      "type": "choice",
+      "event": "callChoice",
+      "actions": [],
+      "next": [
+        "accept-call",
+        "reject-call"
+      ],
+      "once": true
+    },
+    {
+      "id": "accept-call",
       "label": "接听电话",
       "type": "event",
-      "event": "callAccepted",
+      "event": "choose",
       "actions": [
         {
           "type": "variable",
@@ -166,27 +180,91 @@
         {
           "type": "notification",
           "key": "kakao",
-          "value": "田柾国：啊，接通了我的电话呢。"
+          "value": "田柾国：啊，接通了我的电话呢。你不觉得你对我很残忍吗？宝宝、老婆、sweety。"
+        }
+      ],
+      "next": [
+        "accepted-ending"
+      ],
+      "once": true
+    },
+    {
+      "id": "accepted-ending",
+      "label": "接听后挂断",
+      "type": "ending",
+      "actions": [
+        {
+          "type": "ending",
+          "key": "",
+          "value": "接听：与田柾国通话后挂断。"
         }
       ],
       "next": [],
       "once": true
     },
     {
-      "id": "call-rejected",
+      "id": "reject-call",
       "label": "拒绝来电",
       "type": "event",
-      "event": "callRejected",
+      "event": "choose",
       "actions": [
         {
           "type": "variable",
           "key": "callChoice",
           "value": "rejected"
+        },
+        {
+          "type": "notification",
+          "key": "kakao",
+          "value": "田柾国：真的要对我这么残忍？ 腻了？还是外面那个比我更能满足你？说话。"
+        }
+      ],
+      "next": [
+        "rejected-ending"
+      ],
+      "once": true
+    },
+    {
+      "id": "rejected-ending",
+      "label": "拒绝后收到消息",
+      "type": "ending",
+      "actions": [
+        {
+          "type": "ending",
+          "key": "",
+          "value": "拒绝：田柾国发来追问消息。"
         }
       ],
       "next": [],
       "once": true
     }
   ],
-  "tests": []
+  "tests": [
+    {
+      "name": "接听电话",
+      "steps": [
+        {
+          "event": "start"
+        },
+        {
+          "choose": "accept-call"
+        }
+      ],
+      "ending": "接听：与田柾国通话后挂断。",
+      "expectUnlocked": []
+    },
+    {
+      "name": "拒绝来电",
+      "steps": [
+        {
+          "event": "start"
+        },
+        {
+          "choose": "reject-call"
+        }
+      ],
+      "ending": "拒绝：田柾国发来追问消息。",
+      "expectUnlocked": []
+    }
+  ]
 }
