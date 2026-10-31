@@ -3,7 +3,7 @@
   "id": "rose-and-crown",
   "title": "玫瑰与王冠",
   "description": "伦敦与汉普顿宫之间的暗黑奇幻互动手机故事。现实消息与梦境宫廷交错；玩家可先联系二皇子金泰亨，或前往闵玧其的地下酒窖，逐步揭开三日后的加冕阴谋。",
-  "revision": 6,
+  "revision": 7,
   "phone": {
     "owner": "闵黎天",
     "date": "2026-10-24",
@@ -451,11 +451,6 @@
           "value": true
         },
         {
-          "type": "clue",
-          "key": "钟声警告",
-          "value": "钟声警告"
-        },
-        {
           "type": "notification",
           "key": "tae",
           "value": "金泰亨：不要相信钟声。"
@@ -493,11 +488,6 @@
           "type": "variable",
           "key": "yoongiPlanKnown",
           "value": true
-        },
-        {
-          "type": "clue",
-          "key": "地下赌场",
-          "value": "地下赌场"
         },
         {
           "type": "notification",
