@@ -76,30 +76,30 @@
         "jin-taehyung"
       ],
       "messages": [
-        [
-          "tae-001",
-          "早点睡，别熬夜。",
-          "jin-taehyung",
-          "20:47"
-        ],
-        [
-          "tae-002",
-          "你又没回我。",
-          "jin-taehyung",
-          "23:31"
-        ],
-        [
-          "tae-003",
-          "如果今晚梦见宫殿，不要相信钟声。",
-          "jin-taehyung",
-          "23:44"
-        ],
-        [
-          "tae-004",
-          "黎天，听见了吗？",
-          "jin-taehyung",
-          "23:47"
-        ]
+        {
+          "id": "tae-001",
+          "body": "早点睡，别熬夜。",
+          "senderId": "jin-taehyung",
+          "time": "20:47"
+        },
+        {
+          "id": "tae-002",
+          "body": "你又没回我。",
+          "senderId": "jin-taehyung",
+          "time": "23:31"
+        },
+        {
+          "id": "tae-003",
+          "body": "如果今晚梦见宫殿，不要相信钟声。",
+          "senderId": "jin-taehyung",
+          "time": "23:44"
+        },
+        {
+          "id": "tae-004",
+          "body": "黎天，听见了吗？",
+          "senderId": "jin-taehyung",
+          "time": "23:47"
+        }
       ]
     },
     {
@@ -111,24 +111,24 @@
         "min-yoongi"
       ],
       "messages": [
-        [
-          "yoongi-001",
-          "别一个人去地下酒窖。",
-          "min-yoongi",
-          "21:05"
-        ],
-        [
-          "yoongi-002",
-          "金硕珍最近在收贵族的地契。",
-          "min-yoongi",
-          "21:06"
-        ],
-        [
-          "yoongi-003",
-          "如果他进了我的赌场，就别想轻易离开。",
-          "min-yoongi",
-          "21:07"
-        ]
+        {
+          "id": "yoongi-001",
+          "body": "别一个人去地下酒窖。",
+          "senderId": "min-yoongi",
+          "time": "21:05"
+        },
+        {
+          "id": "yoongi-002",
+          "body": "金硕珍最近在收贵族的地契。",
+          "senderId": "min-yoongi",
+          "time": "21:06"
+        },
+        {
+          "id": "yoongi-003",
+          "body": "如果他进了我的赌场，就别想轻易离开。",
+          "senderId": "min-yoongi",
+          "time": "21:07"
+        }
       ]
     },
     {
@@ -140,18 +140,18 @@
         "park-jimin"
       ],
       "messages": [
-        [
-          "jimin-001",
-          "我下周到伦敦。关于订婚的事，想和你谈谈。",
-          "park-jimin",
-          "18:20"
-        ],
-        [
-          "jimin-002",
-          "还有，别摘掉那枚戒指。",
-          "park-jimin",
-          "18:21"
-        ]
+        {
+          "id": "jimin-001",
+          "body": "我下周到伦敦。关于订婚的事，想和你谈谈。",
+          "senderId": "park-jimin",
+          "time": "18:20"
+        },
+        {
+          "id": "jimin-002",
+          "body": "还有，别摘掉那枚戒指。",
+          "senderId": "park-jimin",
+          "time": "18:21"
+        }
       ]
     },
     {
@@ -163,18 +163,18 @@
         "jeon-jungkook"
       ],
       "messages": [
-        [
-          "jk-001",
-          "听说你也在汉普顿宫？",
-          "jeon-jungkook",
-          "22:14"
-        ],
-        [
-          "jk-002",
-          "舞会见。希望这次不是以敌人的身份。",
-          "jeon-jungkook",
-          "22:15"
-        ]
+        {
+          "id": "jk-001",
+          "body": "听说你也在汉普顿宫？",
+          "senderId": "jeon-jungkook",
+          "time": "22:14"
+        },
+        {
+          "id": "jk-002",
+          "body": "舞会见。希望这次不是以敌人的身份。",
+          "senderId": "jeon-jungkook",
+          "time": "22:15"
+        }
       ]
     },
     {
@@ -186,18 +186,18 @@
         "kim-seokjin"
       ],
       "messages": [
-        [
-          "jin-001",
-          "三天后，加冕礼。",
-          "kim-seokjin",
-          "23:01"
-        ],
-        [
-          "jin-002",
-          "你会亲眼看见所有人跪下。",
-          "kim-seokjin",
-          "23:02"
-        ]
+        {
+          "id": "jin-001",
+          "body": "三天后，加冕礼。",
+          "senderId": "kim-seokjin",
+          "time": "23:01"
+        },
+        {
+          "id": "jin-002",
+          "body": "你会亲眼看见所有人跪下。",
+          "senderId": "kim-seokjin",
+          "time": "23:02"
+        }
       ]
     }
   ],
