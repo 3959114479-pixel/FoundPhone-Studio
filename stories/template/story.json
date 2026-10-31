@@ -2,8 +2,8 @@
   "scriptVersion": 1,
   "id": "rose-and-crown",
   "title": "玫瑰与王冠",
-  "description": "一部发生在伦敦与汉普顿宫之间的暗黑奇幻互动手机故事。现实消息与梦境宫廷交错，距离加冕典礼只剩三天。",
-  "revision": 3,
+  "description": "伦敦与汉普顿宫之间的暗黑奇幻互动手机故事。现实消息与梦境宫廷交错；玩家可先联系二皇子金泰亨，或前往闵玧其的地下酒窖，逐步揭开三日后的加冕阴谋。",
+  "revision": 4,
   "phone": {
     "owner": "闵黎天",
     "date": "2026-10-24",
@@ -99,6 +99,18 @@
           "body": "黎天，听见了吗？",
           "senderId": "jin-taehyung",
           "time": "23:47"
+        },
+        {
+          "id": "tae-005",
+          "body": "我抽到了恋人逆位。你和这座宫殿之间，有一份被改写过的契约。",
+          "senderId": "jin-taehyung",
+          "time": "23:49"
+        },
+        {
+          "id": "tae-006",
+          "body": "还有一张女祭司。真相就在你眼前，只是现在还不能看清。",
+          "senderId": "jin-taehyung",
+          "time": "23:50"
         }
       ]
     },
@@ -128,6 +140,18 @@
           "body": "如果他进了我的赌场，就别想轻易离开。",
           "senderId": "min-yoongi",
           "time": "21:07"
+        },
+        {
+          "id": "yoongi-004",
+          "body": "我赢来的地契都收好了。那些贵族以为自己在赌钱，其实是在赌秘密。",
+          "senderId": "min-yoongi",
+          "time": "21:08"
+        },
+        {
+          "id": "yoongi-005",
+          "body": "金硕珍若亲自来，我会让他坐上最后一张牌桌。",
+          "senderId": "min-yoongi",
+          "time": "21:09"
         }
       ]
     },
@@ -151,6 +175,18 @@
           "body": "还有，别摘掉那枚戒指。",
           "senderId": "park-jimin",
           "time": "18:21"
+        },
+        {
+          "id": "jimin-003",
+          "body": "你锁骨下的玫瑰不是普通纹身。它会回应你的精神力。",
+          "senderId": "park-jimin",
+          "time": "22:02"
+        },
+        {
+          "id": "jimin-004",
+          "body": "我的能力能制造金色沙漏的幻象，但真正近身时，我更擅长战斗。",
+          "senderId": "park-jimin",
+          "time": "22:03"
         }
       ]
     },
@@ -174,6 +210,12 @@
           "body": "舞会见。希望这次不是以敌人的身份。",
           "senderId": "jeon-jungkook",
           "time": "22:15"
+        },
+        {
+          "id": "jk-003",
+          "body": "别被大厅里的镜子骗了。有些倒影比本人先动。",
+          "senderId": "jeon-jungkook",
+          "time": "22:18"
         }
       ]
     },
@@ -197,6 +239,18 @@
           "body": "你会亲眼看见所有人跪下。",
           "senderId": "kim-seokjin",
           "time": "23:02"
+        },
+        {
+          "id": "jin-003",
+          "body": "听说你最近总在做梦。梦里的人，也会听从我的命令。",
+          "senderId": "kim-seokjin",
+          "time": "23:03"
+        },
+        {
+          "id": "jin-004",
+          "body": "三天后，所有贵族都会跪下。你也一样。",
+          "senderId": "kim-seokjin",
+          "time": "23:04"
         }
       ]
     }
@@ -225,7 +279,7 @@
       {
         "id": "note-tarot",
         "title": "塔罗牌记录",
-        "body": "恋人（逆位）：契约与错位。\\n女祭司：被隐藏的真相。\\n命运之轮：无法预料的转折。\\n高塔（正位）：加冕礼前夜的崩塌。",
+        "body": "恋人（逆位）：契约与错位。\n女祭司：被隐藏的真相。\n命运之轮：无法预料的转折。\n高塔（正位）：加冕礼前夜的崩塌。\n\n金泰亨说，牌面不是预言，而是可能被改写的命运。",
         "time": "2026-10-24 23:52",
         "sender": "闵黎天",
         "kind": "note"
@@ -233,7 +287,7 @@
       {
         "id": "note-plan",
         "title": "三日倒计时",
-        "body": "距离加冕典礼：三天。\\n1. 找到金硕珍的精神控制媒介。\\n2. 确认玧其哥的赌场能否困住他。\\n3. 在他控制所有贵族之前，进入他的意识。",
+        "body": "距离加冕典礼：三天。\n1. 找到金硕珍精神控制的媒介。\n2. 确认玧其哥的赌场能否困住他。\n3. 弄清玫瑰纹身与异瞳的真正联系。\n4. 在他控制所有贵族之前，进入他的意识。",
         "time": "2026-10-24 23:55",
         "sender": "闵黎天",
         "kind": "note"
@@ -301,6 +355,50 @@
         "kind": "file",
         "folder": "加密档案"
       }
+    ],
+    "mail": [
+      {
+        "id": "mail-coronation-invite",
+        "title": "王室秘书处｜加冕典礼邀请函",
+        "body": "收件人：闵黎天\n地点：汉普顿宫\n日期：2026年10月27日\n请于典礼开始前抵达。所有受邀贵族及其家属均须出席。",
+        "time": "2026-10-24 20:16",
+        "sender": "王室秘书处",
+        "kind": "file",
+        "favorite": true
+      }
+    ],
+    "maps": [
+      {
+        "id": "map-hampton-court",
+        "title": "汉普顿宫",
+        "body": "主线地点｜宫廷走廊、舞会大厅与加冕典礼现场。",
+        "time": "2026-10-24 23:51",
+        "sender": "地图"
+      },
+      {
+        "id": "map-hostage-house",
+        "title": "质子府",
+        "body": "闵玧其居所。地下酒窖入口藏在旧酒架后方。",
+        "time": "2026-10-24 23:53",
+        "sender": "地图"
+      },
+      {
+        "id": "map-underground-cellar",
+        "title": "地下酒窖赌场",
+        "body": "闵玧其经营的秘密赌局。筹码不止是金币，也包括地契与秘密。",
+        "time": "2026-10-24 23:54",
+        "sender": "地图"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "reminder-coronation",
+        "title": "加冕典礼倒计时",
+        "body": "距离加冕典礼还有三天。不要独自行动；确认玫瑰纹身的能力边界。",
+        "time": "2026-10-24 23:55",
+        "sender": "闵黎天",
+        "kind": "note"
+      }
     ]
   },
   "variables": {
@@ -313,25 +411,40 @@
   "events": [
     {
       "id": "story-start",
-      "label": "梦境开始",
+      "label": "23:47｜梦境来临",
       "type": "start",
       "actions": [
         {
           "type": "notification",
           "key": "story",
-          "value": "23:47｜一条来自金泰亨的未读消息。"
+          "value": "金泰亨发来一条警告。手机屏幕的时间停在23:47。"
         }
       ],
-      "next": [],
+      "next": [
+        "first-choice"
+      ],
       "once": true
     },
     {
-      "id": "read-tae-warning",
-      "label": "读到泰亨的警告",
+      "id": "first-choice",
+      "label": "你决定先联系谁？",
+      "type": "choice",
+      "next": [
+        "choose-taehyung",
+        "choose-yoongi"
+      ],
+      "once": true
+    },
+    {
+      "id": "choose-taehyung",
+      "label": "先联系金泰亨",
       "type": "event",
-      "event": "read",
-      "target": "tae-003",
       "actions": [
+        {
+          "type": "variable",
+          "key": "route",
+          "value": "taehyung"
+        },
         {
           "type": "variable",
           "key": "roseAwake",
@@ -340,22 +453,70 @@
         {
           "type": "clue",
           "key": "钟声警告"
+        },
+        {
+          "type": "notification",
+          "key": "tae",
+          "value": "金泰亨：不要相信钟声。"
         }
       ],
       "next": [
-        "ending-rose-awake"
+        "ending-taehyung"
       ],
       "once": true
     },
     {
-      "id": "ending-rose-awake",
-      "label": "第一幕：玫瑰苏醒",
+      "id": "ending-taehyung",
+      "label": "第一幕：女祭司的警告",
       "type": "ending",
       "actions": [
         {
           "type": "ending",
           "key": "ending",
-          "value": "第一幕：玫瑰苏醒"
+          "value": "第一幕：女祭司的警告"
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "choose-yoongi",
+      "label": "先去找闵玧其",
+      "type": "event",
+      "actions": [
+        {
+          "type": "variable",
+          "key": "route",
+          "value": "yoongi"
+        },
+        {
+          "type": "variable",
+          "key": "yoongiPlanKnown",
+          "value": true
+        },
+        {
+          "type": "clue",
+          "key": "地下赌场"
+        },
+        {
+          "type": "notification",
+          "key": "yoongi",
+          "value": "闵玧其：来质子府，走酒窖的后门。"
+        }
+      ],
+      "next": [
+        "ending-yoongi"
+      ],
+      "once": true
+    },
+    {
+      "id": "ending-yoongi",
+      "label": "第一幕：命运之轮",
+      "type": "ending",
+      "actions": [
+        {
+          "type": "ending",
+          "key": "ending",
+          "value": "第一幕：命运之轮"
         }
       ],
       "once": true
@@ -363,14 +524,23 @@
   ],
   "tests": [
     {
-      "name": "阅读泰亨的警告，抵达第一幕结尾",
+      "name": "选择联系金泰亨",
       "steps": [
         {
-          "event": "read",
-          "target": "tae-003"
+          "choose": "choose-taehyung"
         }
       ],
-      "ending": "第一幕：玫瑰苏醒",
+      "ending": "第一幕：女祭司的警告",
+      "expectUnlocked": []
+    },
+    {
+      "name": "选择前往闵玧其的赌场",
+      "steps": [
+        {
+          "choose": "choose-yoongi"
+        }
+      ],
+      "ending": "第一幕：命运之轮",
       "expectUnlocked": []
     }
   ]
